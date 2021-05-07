@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    function countNumber(arr,K){
+        let count=0;
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]===K){
+                count++;
+            }
+        }
+        return count;
+    }
+    let array=[-1,0,3,5,9,-2,-1,-1,3];
+    document.write('tong so gia tri bang -1 trong mang la:'+countNumber(array,-1));
+</script>
+</body>
+</html>

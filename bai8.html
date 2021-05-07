@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai8</title>
+</head>
+<body>
+<canvas id="myCanvas" width="600" height="300" style="border: 1px solid #000000 "></canvas>
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let pen = canvas.getContext('2d');
+
+    class Circle {
+        constructor(x, y, radius, color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+            this.speed = 5;
+        }
+
+        draw(pen) {
+            pen.beginPath();
+            pen.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+            pen.fillStyle = this.color;
+            pen.fill();
+            pen.closePath();
+        }
+
+        moveLeft() {
+            this.x -= this.speed;
+        }
+
+        moveRight() {
+            this.x += this.speed;
+        }
+        moveTop(){
+            this.y -=this.speed;
+        }
+        moveDown(){
+            this.y +=this.speed;
+        }
+    }
+
+    let circle = new Circle(30, 270, 30, 'red');
+
+    function main() {
+        pen.clearRect(0, 0, canvas.width, canvas.height);
+        circle.draw(pen);
+    }
+
+    function move(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                circle.moveLeft();
+                break;
+            case 39:
+                circle.moveRight();
+                break;
+            case 38:
+                circle.moveTop();
+                break;
+            case 40:
+                circle.moveDown();
+                break;
+        }
+    }
+
+
+    window.addEventListener('keydown', move);
+    setInterval(main,50);
+</script>
+</body>
+</html>

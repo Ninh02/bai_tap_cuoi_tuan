@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai7</title>
+</head>
+<body>
+<script>
+    function Arrange(arr){
+        let temp=arr[0];
+        for (let i=0;i<arr.length-1;i++){
+            for(let j=i+1;j<arr.length;j++) {
+                if (arr[i] > arr[j]) {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+    let array=[-1,0,7,5,9,-2];
+    document.write('sap xep cac phan tu trong mang theo chieu tang dan la:'+Arrange(array));
+</script>
+</body>
+</html>

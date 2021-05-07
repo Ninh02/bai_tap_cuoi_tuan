@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    function Fibonaci(n){
+        let arr=[];
+        let F1=0;F2=1;
+        let F;
+        for(let i=0;i<n;i++){
+            F=F1+F2;
+            arr.push(F);
+            F1=F2;
+            F2=F;
+        }
+        return arr;
+    }
+    document.write(Fibonaci(30));
+</script>
+</body>
+</html>

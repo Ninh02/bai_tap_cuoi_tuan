@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 1</title>
+</head>
+<body>
+<script>
+    function findMax(arr){
+        let max=arr[0];
+        for (let i=0;i<arr.length;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+        return max;
+    }
+    let array=[-1,0,3,5,9,-2];
+    document.write('so lon nhat trong mang la:'+findMax(array));
+</script>
+</body>
+</html>

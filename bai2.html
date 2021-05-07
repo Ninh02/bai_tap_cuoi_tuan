@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    function findMin(arr){
+        let min=arr[0];
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]<min){
+                min=arr[i];
+            }
+        }
+       return min;
+    }
+    let array=[-1,0,3,5,9,-2];
+   document.write('so nho nhat trong mang la:'+findMin(array));
+</script>
+</body>
+</html>

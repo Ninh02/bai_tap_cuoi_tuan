@@ -28,17 +28,25 @@
         }
 
         moveLeft() {
-            this.x -= this.speed;
+            if((this.x-this.radius)>0) {
+                this.x -= this.speed;
+            }
         }
 
         moveRight() {
-            this.x += this.speed;
+            if((this.x+this.radius)<canvas.width) {
+                this.x += this.speed;
+            }
         }
         moveTop(){
-            this.y -=this.speed;
+            if((this.y-this.radius)>0) {
+                this.y -= this.speed;
+            }
         }
         moveDown(){
-            this.y +=this.speed;
+            if((this.y+this.radius)<canvas.height) {
+                this.y += this.speed;
+            }
         }
     }
 
